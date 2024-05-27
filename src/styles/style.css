@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.daftar-notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1023.5px) {
+    .daftar-notes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 577.5px) {
+    .daftar-notes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.notes-container {
+    flex-grow: 2;
+    flex-shrink: 12;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    padding-block: 32px;
+    padding-inline: 16px;
+    margin-inline: auto;
+}
+
+.card {
+    box-shadow: 5px 5px 10px rgba(18, 18, 18, 0.354);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+form input,
+form textarea,
+form button{
+    border-width: 2px;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+textarea {
+    max-width: calc(100%);
+    width: 100%;
+}
+
+.max-height-ver {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+
+.form-group {
+    margin-block-start: 15px;
+}
+
+.title-input {
+    width: calc(100%);
+}
+
+.date-input {
+    width: calc(100%);
+}
+
+.form-group button {
+    background-color: #7B5713;
+    border-style: none;
+    color: white;
+}
+
+.form-group button:hover {
+    background-color: #4e370c;
+}
+
+.section-title {
+    margin-block-end: 20px;
+}
+
+.notes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: 0;
+    justify-content: space-around;
+
+    gap: 24px 18px;
+}
+
+
+.footer {
+    position: bottom;
+}
+
+@media screen and (max-width: 996.5px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.notes-form {
+    flex-grow: 1;
+}

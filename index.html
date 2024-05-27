@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/bootstrap-icon.css">
+    <link rel="stylesheet" href="./src/styles/loading.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Notes App - Ahmad Akbar</title>
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+    <main class="container">
+      <section class="notes-form card">
+        <h2>Buat catatan <i class="bi bi-plus-circle"></i></h2>
+        <br />
+        <form id="notes-form">
+          <div class="form-group">
+            <label for="note-title">Judul</label>
+            <div>
+              <input
+                maxlength="20"
+                id="note-title"
+                name="noteTitles"
+                placeholder="Masukkan judul"
+                class="title-input"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="note-body">Deskripsi</label>
+            <div>
+              <textarea
+                id="note-body"
+                name="noteBodies"
+                class="max-height-ver"
+                placeholder="Masukkan deskripsi singkat"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <button style="width: 100%">
+              <i class="bi-bookmark-fill"></i> Simpan
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="notes-container card">
+        <div class="section-title">
+          <h2>Daftar Catatanmu <i class="bi bi-card-list"></i></h2>
+        </div>
+        <div id="daftar-notes" class="daftar-notes"></div>
+      </section>
+    </main>
+    <footer class="footer"><footer-bar></footer-bar></footer>
+    <div class="loader" id="loading-animation"></div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- <script src="./index.js" type="module"></script> -->
+  </body>
+</html>
